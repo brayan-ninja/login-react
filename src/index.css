@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+/* Global Styles */
+* {
+    font-family: "Quicksand", sans-serif;
+    color: #444;
+    font-size: 16px;
+    margin: 0;
+    box-sizing: border-box; /* Added for better box model handling */
+}
+
+/* Navigation Bar */
+.nav {
+    background-color: #4a4e69; /* Darker background color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+    padding: 0 20px; /* Added padding for spacing */
+}
+
+.nav .logo h1 {
+    color: #f0e9d2; /* Lighter color for contrast */
+    font-size: 2rem; /* Increased font size */
+}
+
+.nav .logo #logo-h1 {
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem; /* Increased gap for spacing */
+}
+
+.nav-links #links {
+    color: #f0e9d2; /* Consistent link color */
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.nav-links #links:hover {
+    color: #c9ada7; /* Hover color change */
+}
+
+/* Form Container */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh; /* Increased height for more space */
+    padding: 40px; /* Increased padding for comfort */
+    background-color: #f0e9d2; /* Light background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+}
+
+.form-container 
+
+/* Form Styles */
+form {
+    background-color: #22223b; /* Darker form background */
+    padding: 30px; /* Increased padding */
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    width: 350px; /* Slightly wider form */
+}
+
+/* Label Styles */
+label {
+    margin-bottom: 10px; /* More space */
+    font-weight: bold;
+    color: #f0e9d2; /* Consistent color for labels */
+}
+
+/* Input Styles */
+input {
+    width: 100%; /* Full width for inputs */
+    padding: 12px; /* Increased padding */
+    margin-bottom: 15px; /* Space between inputs */
+    border: 2px solid #4a4e69; /* Darker border */
+    border-radius: 6px; /* Rounded corners */
+    transition: border-color 0.3s; /* Smooth transition */
+}
+
+input:focus {
+    border-color: #c9ada7; /* Change border color on focus */
+}
+
+/* Button Styles */
+button {
+    background-color: #9a8c98; /* Softer button color */
+    color: #f0e9d2; /* Lighter text color */
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #6a5acd; /* Change button color on hover */
+}
+
+/* Register Link Styles */
+.register-link {
+    display: block;
+    margin-top: 15px; /* Space above */
+    color:whitesmoke; /* Consistent link color */
+    text-decoration: underline;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+
+
+.register-link:hover {
+    color: #c9ada7; /* Change color on hover */
+}
+
+
+
+
