@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import { useState } from "react";
+import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; 
 
-const Register = () => {
+const AddStudent = () => {
   const [data, setData] = useState({
     firstname: "",
     lastname: "",
@@ -15,57 +17,63 @@ const Register = () => {
   const saveStudent = (e) => {
     e.preventDefault();
     const token = sessionStorage.getItem("access_token");
-    axios.post('http://localhost:4000/addstudent', data, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-        'Content-Type': 'application/json',
-      },
-    })
-    .then(response => {
-      console.log('Student saved successfully', response);
-    })
-    .catch(error => {
-      console.error('There was an error saving the student!', error);
-    });
+
+    axios
+      .post('http://localhost:4000/addstudent', data, {
+        headers: {
+          Authorization: `Bearer ${token}`, // Corrected syntax
+          'Content-Type': 'application/json',
+        },
+      })
+      .then(res => {
+        toast.success("Student added successfully!");
+      })
+      .catch((error) => {
+        toast.error("Failed to add student. Please try again.");
+      });
   };
 
   return (
     <div className="form-container">
+      <h2>Add New Student</h2>
       <form onSubmit={saveStudent}>
         <div>
-          <label>First Name</label>
+          <label>Firstname:</label>
           <input
             type="text"
             name="firstname"
             placeholder="Enter first name"
-            value={data.firstname}
             onChange={handleChange}
+            required
           />
         </div>
         <div>
-          <label>Last Name</label>
+          <label>Lastname:</label>
           <input
             type="text"
             name="lastname"
             placeholder="Enter last name"
-            value={data.lastname}
             onChange={handleChange}
+            required
           />
         </div>
         <div>
-          <label>Gender</label>
+          <label>Gender:</label>
           <input
             type="text"
             name="gender"
             placeholder="Enter gender"
-            value={data.gender}
             onChange={handleChange}
+            required
           />
         </div>
-        <button type="submit">Register</button>
+        <button type="submit">Add Student</button>
       </form>
+      <ToastContainer position="top-right" autoClose={3000} />
     </div>
   );
 };
 
-export default Register;
+export default AddStudent;
+
+
